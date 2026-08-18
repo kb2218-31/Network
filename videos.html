@@ -3,178 +3,204 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>制作した動画作品 | KB2218 Network</title>
+<title>制作した動画作品-p2</title>
 <style>
-
-body{
-    margin:0;
-    background:#f3f3f3;
-    font-family:"Yu Gothic",sans-serif;
-    color:#222;
-    line-height:1.7;
+:root {
+    --bg: #ffffff;
+    --panel: #ffffff;
+    --panel-alt: #f8f8f8;
+    --line: #d9d9d9;
+    --text: #1d1d1d;
+    --muted: #5f6470;
+    --primary: #3b5f93;
+    --primary-dark: #2d4f7a;
+    --accent: #f2f5fb;
 }
 
-.container{
-    max-width:850px;
-    margin:20px auto;
-    background:#fff;
-    border:1px solid #ddd;
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #ffffff;
+    font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+    color: var(--text);
+    line-height: 1.7;
 }
 
-header{
-    padding:30px;
+.container {
+    max-width: 980px;
+    margin: 12px 0 18px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: visible;
 }
 
-h1{
-    margin:0;
-    font-size:2.5rem;
-    font-weight:600;
+header {
+    padding: 28px 18px 18px;
+    background: #ffffff;
 }
 
-.subtitle{
-    margin-top:10px;
-    color:#666;
-    font-size:1.1rem;
+h1, h2, h3 {
+    margin: 0;
+    color: var(--text);
 }
 
-.line{
-    height:2px;
-    background:#d8d8d8;
+header h1 {
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
 }
 
-.content{
-    padding:30px;
+.subtitle {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 1.02rem;
 }
 
-section h2{
-    color:#3d6fb4;
-    border-bottom:1px solid #ddd;
-    padding-bottom:8px;
-    margin-bottom:15px;
+.line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--line) 10%, var(--line) 90%, transparent 100%);
 }
 
-.work{
-    border:1px solid #ddd;
-    padding:18px;
-    margin-bottom:15px;
-    background:#fafafa;
+.content {
+    padding: 30px;
 }
 
-.thumbnail{
-    width:100%;
-    max-width:500px;
-    border:1px solid #ccc;
+section {
+    margin-top: 24px;
 }
 
-a{
-    color:#0047aa;
+section h2 {
+    color: var(--primary);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    font-size: 1.4rem;
 }
 
-footer{
-    text-align:center;
-    padding:30px;
-    color:#777;
-    border-top:1px solid #ddd;
+.intro {
+    margin: 0 0 18px;
+    color: var(--muted);
 }
 
-.back{
-    margin-top:30px;
+.work {
+    border: 1px solid var(--line);
+    border-radius: 0;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    background: #fafafa;
+    box-shadow: none;
 }
 
-@media(max-width:600px){
-
-header{
-    padding:20px;
+.work strong {
+    display: inline-block;
+    font-size: 1.08rem;
+    margin-bottom: 8px;
 }
 
-.content{
-    padding:20px;
+.meta {
+    color: var(--muted);
+    font-size: 0.96rem;
+    margin-bottom: 14px;
 }
 
-h1{
-    font-size:2rem;
+.video-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 1px solid var(--line);
+    border-radius: 0;
+    display: block;
+    margin: 8px 0 16px;
+    background: #000;
 }
 
+.back {
+    margin-top: 20px;
 }
 
-.video-frame{
-    width:100%;
-    aspect-ratio:16/9;
-    border:none;
-    display:block;
+a {
+    color: var(--primary);
+    text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 22px 30px 30px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    background: #fbfcff;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 10px 0 14px;
+    }
+
+    header,
+    .content {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    header {
+        padding-top: 22px;
+    }
+}
 </style>
 </head>
 <body>
 <div class="container">
 <header>
 <h1>制作した動画作品</h1>
-<div class="subtitle">
-過去に制作した動画作品の一部を紹介しています。<br>
-</div>
+<div class="subtitle">過去に制作した動画作品の一部を紹介しています。</div>
 </header>
+
 <div class="line"></div>
 <div class="content">
 <section>
-
-<p>
+<p class="intro">
 このページでは、過去に制作した動画作品の一部を紹介しています。<br>
-原曲、歌詞等の著作権は各権利者様に帰属します。<br>
-</p>
+原曲、歌詞等の著作権は各権利者様に帰属します。
+ </p>
 </section>
+
 <section>
 <h2>カバー・その他作品一覧</h2>
 
 <div class="work">
-
-<b>MIMI - 恋しくなったら手を叩こう　初音ミクcover</b><br>
-公開日：2026年6月28日
-
-<br><br>
-
-<iframe class="video-frame" src="https://www.youtube.com/embed/taT4uoNHs8w?si=vEO8DonQfDCGnkM1" 
-title="YouTube video player" frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br><br>
+<strong>MIMI - 恋しくなったら手を叩こう　初音ミクcover</strong><br>
+<div class="meta">公開日：2026年6月28日</div>
+<iframe class="video-frame" src="https://www.youtube.com/embed/taT4uoNHs8w?si=vEO8DonQfDCGnkM1"
+title="YouTube video player" frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
 
 MIMI様の「恋しくなったら手を叩こう」という曲を初音ミクV4Xでカバーしてみました！
-本当に素敵な楽曲なのでぜひ聴きに行ってくださいね！<br>
+本当に素敵な楽曲なのでぜひ聴きに行ってくださいね。<br>
 原曲/恋しくなったら手を叩こう<br>
-作詞・作曲:　<a href="http://www.youtube.com/@MIMI...official" target="_blank">
-MIMI </a>様
+作詞・作曲：<a href="http://www.youtube.com/@MIMI...official" target="_blank" rel="noopener noreferrer">MIMI</a>様<br><br>
 
-
-<br><br>
-原曲： <a href="https://youtu.be/iiPet5Z6vmg?si=PRaOJbXTU2Gc1jsl" target="_blank">
-原曲動画 </a>
-<br>
-
-<a href="https://youtu.be/taT4uoNHs8w?si=FxMirTKfbuNPuqcC" target="_blank">
-YouTubeで視聴する
-</a>
+原曲：<a href="https://youtu.be/iiPet5Z6vmg?si=PRaOJbXTU2Gc1jsl" target="_blank" rel="noopener noreferrer">原曲動画</a><br>
+<a href="https://youtu.be/taT4uoNHs8w?si=FxMirTKfbuNPuqcC" target="_blank" rel="noopener noreferrer">YouTubeで視聴する</a>
 </div>
-</div>
-
 </section>
 
 <div class="back">
-
 <a href="index.html">ホームへ戻る</a>
-
 </div>
-
 </div>
 
 <footer>
-
-© KB2218 Network
-
+© yu-sabu 2026.
 </footer>
-
 </div>
 
 </body>
 </html>
+
