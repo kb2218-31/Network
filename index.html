@@ -3,146 +3,247 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>KB2218 Network</title>
+<title>yu-sabuのホームぺージ</title>
 
 <style>
 
-body{
-    margin:0;
-    background:#f3f3f3;
-    font-family:"Yu Gothic",sans-serif;
-    color:#222;
-    line-height:1.7;
+:root {
+    --bg: #ffffff;
+    --panel: #ffffff;
+    --panel-alt: #f8f8f8;
+    --line: #d9d9d9;
+    --text: #1d1d1d;
+    --muted: #5f6470;
+    --primary: #3b5f93;
+    --primary-dark: #2d4f7a;
+    --accent: #f2f5fb;
 }
 
-.container{
-    max-width:850px;
-    margin:20px auto;
-    background:#fff;
-    border:1px solid #ddd;
+* {
+    box-sizing: border-box;
 }
 
-header{
-    padding:30px;
+body {
+    margin: 0;
+    background: #ffffff;
+    font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+    color: var(--text);
+    line-height: 1.7;
 }
 
-h1{
-    margin:0;
-    font-size:2.5rem;
-    font-weight:600;
+.container {
+    max-width: 980px;
+    margin: 12px 0 18px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: visible;
 }
 
-.subtitle{
-    margin-top:10px;
-    color:#666;
-    font-size:1.1rem;
+header {
+    padding: 28px 18px 18px;
+    background: #ffffff;
 }
 
-.line{
-    height:2px;
-    background:#d8d8d8;
+h1,
+h2,
+h3 {
+    margin: 0;
+    color: var(--text);
 }
 
-.profile{
-    padding:25px 30px;
+header h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
 }
 
-.profile-box{
-    display:flex;
-    align-items:center;
-    gap:15px;
+.subtitle {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 1.02rem;
 }
 
-.icon{
-    width:72px;
-    height:72px;
-    border:1px solid #ccc;
-    object-fit:cover;
+.line {
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--line) 10%,
+        var(--line) 90%,
+        transparent 100%
+    );
 }
 
-.name{
-    font-size:1.2rem;
-    font-weight:bold;
+.profile {
+    padding: 24px 30px 8px;
 }
 
-.desc{
-    margin-top:15px;
+.profile-card {
+    background: var(--panel-alt);
+    border: 1px solid var(--line);
+    border-radius: 0;
+    padding: 18px 16px;
 }
 
-.content{
-    padding:0 30px 30px;
+.profile-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
-section{
-    margin-top:35px;
+.name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.4;
 }
 
-section h2{
-    color:#3d6fb4;
-    border-bottom:1px solid #ddd;
-    padding-bottom:8px;
-    margin-bottom:15px;
+.name-tag {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--primary-dark);
+    border: 1px solid #d7e5ff;
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
 }
 
-.news-item{
-    padding:10px 0;
-    border-bottom:1px dotted #ccc;
+.desc {
+    margin-top: 16px;
+    color: var(--text);
+    font-size: 0.98rem;
 }
 
-details.news-item{
-    cursor:pointer;
+.content {
+    padding: 0 30px 30px;
 }
 
-details.news-item summary{
-    font-weight:bold;
-    padding:8px 0;
-    user-select:none;
+section {
+    margin-top: 32px;
 }
 
-details.news-item summary:hover{
-    color:#3d6fb4;
+section h2 {
+    color: var(--primary);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    font-size: 1.45rem;
 }
 
-.work{
-    border:1px solid #ddd;
-    padding:18px;
-    margin-bottom:10px;
-    background:#fafafa;
+.news-item {
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 0;
+    background: #fff;
+    margin-bottom: 12px;
+    box-shadow: none;
 }
 
-a{
-    color:#0047aa;
+.news-item summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--text);
+    user-select: none;
+    list-style: none;
 }
 
-footer{
-    text-align:center;
-    padding:30px;
-    color:#777;
-    border-top:1px solid #ddd;
+.news-item summary::-webkit-details-marker {
+    display: none;
 }
 
-@media(max-width:600px){
-
-header{
-    padding:20px;
+.news-item summary::before {
+    content: "＋";
+    display: inline-block;
+    width: 18px;
+    color: var(--primary);
+    font-weight: 700;
 }
 
-.profile{
-    padding:20px;
+.news-item[open] summary::before {
+    content: "−";
 }
 
-.content{
-    padding:0 20px 20px;
+.news-item summary:hover {
+    color: var(--primary);
 }
 
-h1{
-    font-size:2rem;
+.news-item p,
+.news-item a {
+    margin-top: 10px;
+    display: inline-block;
 }
 
-.icon{
-    width:64px;
-    height:64px;
+.work {
+    border: 1px solid var(--line);
+    border-radius: 0;
+    padding: 18px 16px;
+    margin-bottom: 14px;
+    background: #fafafa;
+    box-shadow: none;
+}
+
+.work strong {
+    display: inline-block;
+    font-size: 1.08rem;
+    margin-bottom: 8px;
+}
+
+.work + .work {
+    margin-top: 12px;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+li {
+    margin: 6px 0;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 22px 30px 30px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    background: #fbfcff;
+}
+
+@media (max-width: 600px) {
+
+.container {
+    margin: 10px 0 14px;
+}
+
+header,
+.profile,
+.content {
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+header {
+    padding-top: 22px;
+}
+
+.profile-card {
+    padding: 14px;
+}
+
+.profile-meta {
+    align-items: flex-start;
 }
 
 }
@@ -150,28 +251,34 @@ h1{
 </style>
 </head>
 <body>
+<div class="container">
 <header>
+<h2>yu-sabuのホームぺージ</h2>
 
-<h1>KB2218 Network</h1>
 <div class="subtitle">
 個人制作物・活動記録
 </div>
-</header>
 
+</header>
 <div class="line"></div>
 <div class="profile">
-<div class="profile-box">
-<img src="icon.JPG" alt="icon" class="icon">
-
+<div class="profile-card">
+<div class="profile-meta">
 <div>
-<div class="name">ゆーさぶ</div>
-<div>Web・cover曲・動画制作</div>
+<div class="name">
+ゆーさぶ
 </div>
+</div>
+
+<span class="name-tag">
+Web・cover曲・動画制作
+</span>
 </div>
 
 <div class="desc">
 このサイトは、製作者の個人制作物や活動記録、お知らせなどをまとめたアーカイブサイトです。<br>
 Web制作、プロジェクト、動画作品など、これまでの作品を掲載しています。
+</div>
 </div>
 </div>
 
@@ -266,34 +373,32 @@ MIMI Timeは、ボカロP「MIMI」様の楽曲との新しい出会いを届け
 今後のMIMI Timeをよりよくするために、皆様のご意見をお聞かせください！<br>
 </div>
 </section>
-
 <section>
+
 <h2>リンク集</h2>
 <ul>
 <li><a href="https://mimitimefan03.pythonanywhere.com">MIMI Time</a></li>
-<li><a href="http://www.youtube.com/@yu-sabu_P">YouTube</a></li>
+<li><a href="https://www.youtube.com/@yu-sabu_P">YouTube</a></li>
 <li><a href="https://piapro.jp/yu_sabu_P">piapro</a></li>
 <li><a href="https://x.com/yu_sabu_P">Twitter(現X)</a></li>
 <li><a href="https://github.com/MIMI-time-dev">GitHub</a></li>
 </ul>
 
 <h2>お問い合わせ</h2>
-
 <p>
 ご意見、ご質問、問題等のご報告などがございましたら、
-X(旧Twitter)のDMまたはメールよりご連絡ください。<br>
+X（旧Twitter）のDMまたはメールよりご連絡ください。<br>
 <a href="mailto:kb2218.net@gmail.com">
 メールで連絡する</a>
 </p>
 
 </section>
 </div>
+
 <footer>
-
-© KB2218 Network
-
+© yu-sabu 2026.
 </footer>
-</div>
+
 </div>
 </body>
 </html>
